@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "mkcert": "mkdir ssl > /dev/null; mkcert --cert-file ssl/spandx.pem --key-file ssl/spandx-key.pem dev.foo.redhat.com qa.foo.redhat.com stage.foo.redhat.com prod.foo.redhat.com"
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
@@ -36,6 +37,7 @@
     "eslint-plugin-react": "^7.29.4",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
+    "spandx": "^2.2.5",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3",
     "vite": "^2.9.5",
